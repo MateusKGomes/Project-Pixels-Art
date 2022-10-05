@@ -8,6 +8,23 @@ body {
 }
 
 #color-palette {
-    margin-left: 300px;
-
+    margin-left: 300px; 
 }
+
+#button-random-color {
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+}
+
+#pixel-board {
+    margin-top: 0px;
+    position: relative;
+    display: grid; 
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 200px;
+    width: 100px;
+    margin-left: 400px;
+    border: 1px solid black;
+}
+

@@ -50,9 +50,9 @@ color4('red');
 
 function buttonColor () {
  let randomButton = document.createElement('button');
- randomButton.id = 'button-random-color';
-randomButton.innerHTML = 'Cores aleatórias'
-document.body.appendChild(randomButton);
+    randomButton.id = 'button-random-color';
+    randomButton.innerHTML = 'Cores aleatórias';
+    document.body.appendChild(randomButton);
 }
 buttonColor();
 
@@ -60,11 +60,8 @@ function randomColor2 (){
 let colorGenerate = document.getElementById('button-random-color');
 randomGenerate =  Math.floor(Math.random()*16777215).toString(16);
 let color2 = document.getElementById('color2');
-color2.style.backgroundColor= "#" + randomGenerate;
-
-
-    colorGenerate.addEventListener("click", randomColor2);
-
+color2.style.backgroundColor = "#" + randomGenerate;
+colorGenerate.addEventListener("click", randomColor2);
 }
 randomColor2();
 
@@ -72,7 +69,7 @@ function randomColor3 (){
 let colorGenerate = document.getElementById('button-random-color');
 randomGenerate =  Math.floor(Math.random()*16777215).toString(16);
 let color3 = document.getElementById('color3');
-color3.style.backgroundColor= "#" + randomGenerate;
+color3.style.backgroundColor = "#" + randomGenerate;
 colorGenerate.addEventListener("click", randomColor3);
 
 }
@@ -83,9 +80,26 @@ function randomColor4 (){
     let colorGenerate = document.getElementById('button-random-color');
     randomGenerate =  Math.floor(Math.random()*16777215).toString(16);
     let color4 = document.getElementById('color4');
-    color4.style.backgroundColor= "#" + randomGenerate;
+    color4.style.backgroundColor = "#" + randomGenerate;
     colorGenerate.addEventListener("click", randomColor4);
     
-    }
+}
 randomColor4();
 
+// // Requisito 6:
+
+function pixels (){
+   let getPixels = document.getElementById('pixel-board');
+   for(let index = 0; index <25; index += 1){
+    let createDiv = document.createElement('div');
+    createDiv.classList.add('pixel');
+    createDiv.id = index; 
+    createDiv.style.border = '1px solid black';
+    createDiv.style.backgroundColor = 'white'
+    createDiv.style.width = '70px'
+    createDiv.style.height = '60px'
+    getPixels.appendChild(createDiv);
+   }
+}
+
+pixels();
