@@ -23,7 +23,6 @@ function color1 (color) {
     let border = document.getElementById('color1');
     border.style.backgroundColor = color;
 
-
 }
 color1('black');
 
@@ -86,7 +85,7 @@ function randomColor4 (){
 }
 randomColor4();
 
-// // Requisito 6:
+// // Requisito 6,7:
 
 function pixels (){
    let getPixels = document.getElementById('pixel-board');
@@ -103,3 +102,15 @@ function pixels (){
 }
 
 pixels();
+
+window.onload = function getColor1() {
+    let color1 = document.getElementById('color1');
+    color1.classList.add('selected', 'color');
+    color1.style.backgroundColor = 'black'
+
+
+    color1.addEventListener('click', function(event) {
+        event.target.selected
+    } )
+
+}

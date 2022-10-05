@@ -13,8 +13,9 @@ body {
 
 #button-random-color {
     position: absolute;
-    display: block;
+    display: inline-block;
     margin-top: 20px;
+    
 }
 
 #pixel-board {
