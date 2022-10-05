@@ -96,8 +96,8 @@ function pixels (){
     createDiv.id = index; 
     createDiv.style.border = '1px solid black';
     createDiv.style.backgroundColor = 'white'
-    createDiv.style.width = '70px'
-    createDiv.style.height = '60px'
+    createDiv.style.width = '40px'
+    createDiv.style.height = '40px'
     getPixels.appendChild(createDiv);
    }
 }
