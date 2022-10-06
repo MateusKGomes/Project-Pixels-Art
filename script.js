@@ -61,6 +61,7 @@ randomGenerate =  Math.floor(Math.random()*16777215).toString(16);
 let color2 = document.getElementById('color2');
 color2.style.backgroundColor = "#" + randomGenerate;
 colorGenerate.addEventListener("click", randomColor2);
+
 }
 randomColor2();
 
@@ -79,17 +80,24 @@ function randomColor4 (){
     let colorGenerate = document.getElementById('button-random-color');
     randomGenerate =  Math.floor(Math.random()*16777215).toString(16);
     let color4 = document.getElementById('color4');
-    color4.style.backgroundColor = "#" + randomGenerate;
+    color4.style.backgroundColor =  `#${randomGenerate}`;
     colorGenerate.addEventListener("click", randomColor4);
     
 }
 randomColor4();
 
-// // Requisito 6,7:
+// function colorStorage(){
+//     let getColor = document.getElementById('color1');
+//     let backGround = getColor.style.backgroundColor;
+//     localStorage.setItem(backGround);
 
-function pixels (){
+// }
+// colorStorage();
+// Requisito 6,7:
+
+function pixels (numberPixels){
    let getPixels = document.getElementById('pixel-board');
-   for(let index = 0; index <25; index += 1){
+   for(let index = 0; index < numberPixels; index += 1){
     let createDiv = document.createElement('div');
     createDiv.classList.add('pixel');
     createDiv.id = index; 
@@ -101,16 +109,36 @@ function pixels (){
    }
 }
 
-pixels();
+pixels('25');
 
-window.onload = function getColor1() {
+window.onload = function () {
     let color1 = document.getElementById('color1');
     color1.classList.add('selected', 'color');
     color1.style.backgroundColor = 'black'
-
-
-    color1.addEventListener('click', function(event) {
-        event.target.selected
-    } )
-
 }
+
+// function getColors() {
+//     let paintPixels = document.querySelector('#color-palette');
+//         paintPixels.addEventListener('click', function (event){
+//         event.target.classList = 'color selected';
+//         })
+//     }
+    // getColors();
+
+    function changeClass (){
+        let selectedColor = document.getElementsByClassName('color selected');
+        let color = document.querySelector('#color-palette');
+        color.addEventListener('click', function(event) {
+          if (selectedColor.length === 1) {
+            event.target.classList = 'color';
+          }else if (selectedColor.length > 1){
+            event.target.classList.remove('selected');
+          }else if(selectedColor.length === 0){
+            event.target.classList = 'color selected';
+          }else {
+            event.target.classList = 'color'
+          }
+        })   
+}
+
+changeClass();

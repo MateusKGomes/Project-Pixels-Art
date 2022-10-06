@@ -1,5 +1,6 @@
 body {
-    margin: 20px
+    margin: 20px;
+    background-color: rgb(179, 149, 149);
 }
 
 #title {
@@ -8,14 +9,15 @@ body {
 }
 
 #color-palette {
-    margin-left: 300px; 
+    margin-left: 350px; 
 }
 
 #button-random-color {
     position: absolute;
-    display: inline-block;
-    margin-top: 20px;
-    
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+
 }
 
 #pixel-board {
@@ -23,9 +25,9 @@ body {
     position: relative;
     display: grid; 
     grid-template-columns: auto auto auto auto auto;
-    margin-top: 200px;
+    margin-top: 90px;
     width: 100px;
-    margin-left: 400px;
+    margin-left: 500px;
     border: 1px solid black;
 }
 
