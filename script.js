@@ -142,22 +142,30 @@ window.onload = function () {
     // getColors();
 
     function changeClass (){
-        let selectedColor = document.getElementsByClassName('color selected');
-        let color = document.querySelector('#color-palette');
-        color.addEventListener('click', function(event) {
-          if (selectedColor.length === 1) {
-            event.target.classList = 'color';
-          }else if (selectedColor.length > 1){
-            event.target.classList.remove('selected');
-          }else if(selectedColor.length === 0){
-            event.target.classList = 'color selected';
-          }else {
-            event.target.classList = 'color'
-          }
-        })   
-}
+      let color = document.querySelector('#color-palette');
+          color.addEventListener('click', function(event) {
+            let selectedColor = document.querySelector('.selected');
+            selectedColor.className = 'color';
+            event.target.className =  'color selected';
+        })
+      }
+  
+changeClass(); 
 
-changeClass();
+// function changeClass (){
+//   let selectedColor = document.getElementsByClassName('color selected');
+//   let color = document.querySelector('#color-palette');
+//   color.addEventListener('click', function(event) {
+//     if (selectedColor.length === 1) {
+//       event.target.classList = 'color';
+//     }else if (selectedColor.length > 1){
+//       event.target.classList.remove('selected');
+//     }else if(selectedColor.length === 0){
+//       event.target.classList = 'color selected';
+//     }else {
+//       event.target.classList = 'color'
+//     }
+//   })   
 
 function setPixels (){
     let pixels = document.getElementById('pixel-board');
@@ -166,7 +174,7 @@ function setPixels (){
         event.target.style.backgroundColor = color.style.backgroundColor;
 })
 }
-setPixels();
+setPixels(); // pinta os meus pixels;
 
 function clearPixels (){
   let getButton = document.getElementById('clear-board');
