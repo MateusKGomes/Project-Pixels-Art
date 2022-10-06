@@ -52,8 +52,24 @@ function buttonColor () {
     randomButton.id = 'button-random-color';
     randomButton.innerHTML = 'Cores aleatórias';
     document.body.appendChild(randomButton);
+    randomButton.style.backgroundColor= 'black';
+    randomButton.style.color = 'white';
 }
 buttonColor();
+
+function clearButton (){
+  let createButton = document.createElement('button');
+  createButton.id = 'clear-board';
+  createButton.innerHTML = 'Limpar';
+  document.body.appendChild(createButton);
+  createButton.style.marginTop = '30px';
+  createButton.style.backgroundColor = 'black'
+  createButton.style.color = 'white';
+
+
+}
+clearButton();
+
 
 function randomColor2 (){
 let colorGenerate = document.getElementById('button-random-color');
@@ -151,3 +167,19 @@ function setPixels (){
 })
 }
 setPixels();
+
+function clearPixels (){
+  let getButton = document.getElementById('clear-board');
+  let getPixels = document.querySelectorAll('.pixel');
+  let setNewColor = 'white';
+  
+  getButton.addEventListener('click', function (event) {
+    for(let index = 0; index < getPixels.length; index += 1){
+      if(getPixels[index].style.backgroundColor !==  setNewColor){
+        getPixels[index].style.backgroundColor = setNewColor;
+      }
+    }
+    })
+  }
+  
+clearPixels();

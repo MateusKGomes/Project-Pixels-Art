@@ -15,19 +15,33 @@ body {
 #button-random-color {
     position: absolute;
     display: flex;
-    align-items: center;
-    margin-top: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    float: left;
+    margin-top: 52px;
+    margin-left: 500px;
 
 }
 
+ #clear-board{
+    position: relative;
+    float: right;
+    margin-right: 500px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+
+
+ }
+
 #pixel-board {
     margin-top: 0px;
-    position: relative;
+    position: absolute;
     display: grid; 
     grid-template-columns: auto auto auto auto auto;
-    margin-top: 90px;
+    margin-top: 150px;
     width: 100px;
     margin-left: 500px;
     
 }
+
 
