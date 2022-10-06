@@ -142,3 +142,12 @@ window.onload = function () {
 }
 
 changeClass();
+
+function setPixels (){
+    let pixels = document.getElementById('pixel-board');
+    pixels.addEventListener('click', function (event){
+        let color = document.querySelector('.selected');
+        event.target.style.backgroundColor = color.style.backgroundColor;
+})
+}
+setPixels();
