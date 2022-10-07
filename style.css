@@ -1,47 +1,37 @@
 body {
-    margin: 20px;
-    background-color: rgb(84, 92, 134);
+        margin: 20px;
+        background-color: rgb(0, 25, 148);
 }
 
 #title {
-    text-align: center;
-
+        text-align: center;
 }
 
 #color-palette {
-    margin-left: 350px; 
+        margin-left: 350px; 
 }
 
 #button-random-color {
-    position: absolute;
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 10px;
-    float: left;
-    margin-top: 52px;
-    margin-left: 500px;
-
+        position: absolute;
+        display: flex;
+        padding: 10px;
+        float: left;
+        margin-top: 52px;
+        margin-left: 500px;
 }
 
- #clear-board{
-    position: relative;
-    float: right;
-    margin-right: 500px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 10px;
-
-
+#clear-board {
+        position: relative;
+        float: right;
+        margin-right: 500px;
+        padding: 10px;
  }
 
 #pixel-board {
-    margin-top: 0px;
-    position: absolute;
-    display: grid; 
-    grid-template-columns: auto auto auto auto auto;
-    margin-top: 150px;
-    width: 100px;
-    margin-left: 500px;
-    
+        position: absolute;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        margin-top: 150px;
+        width: 100px;
+        margin-left: 500px;
 }
-
-
