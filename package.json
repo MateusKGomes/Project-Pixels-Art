@@ -23,5 +23,20 @@
   },
   "dependencies": {
     "eslint-config-trybe-fundamentals": "1.1.0"
-  }
+  },
+  "name": "sd-027-b-project-pixels-art",
+  "description": "Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por Slack! #vqv :rocket:",
+  "version": "1.0.0",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-027-b-project-pixels-art.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-027-b-project-pixels-art/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-027-b-project-pixels-art#readme",
+  "keywords": []
 }
